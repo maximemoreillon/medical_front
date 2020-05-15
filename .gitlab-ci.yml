@@ -17,7 +17,6 @@ containerization:
       else echo "${CONTAINER_REGISTRY_PASSWORD}" | docker login ${CONTAINER_REGISTRY} --username ${CONTAINER_REGISTRY_USERNAME} --password-stdin;
       fi
     # Copy env vars
-    - cp ${ACCOUNT_NAMES} ./.env
     - cp ${ENV} ./.env.production
     # Building and pushing container image
     - docker build -t ${CONTAINER_REGISTRY}/${APPLICATION_NAME} .
