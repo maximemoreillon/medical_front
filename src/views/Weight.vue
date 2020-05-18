@@ -2,6 +2,8 @@
   <div class="home">
     <div v-if="dataCollection.loaded">
 
+      <h1>Weight</h1>
+
       <div class="current_weight_wrapper">
         Current weight: {{dataCollection.datasets[0].data[dataCollection.datasets[0].data.length-1]}} kg
       </div>

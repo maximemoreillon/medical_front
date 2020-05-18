@@ -1,7 +1,8 @@
 <template>
   <div class="blood_pressure">
     <h1>Blood pressure</h1>
-    <router-link to="/register_blood_pressure">Register new</router-link>
+    <p><router-link to="/register_blood_pressure">Register new</router-link></p>
+
     <template
       v-if="dataCollection.loaded">
 

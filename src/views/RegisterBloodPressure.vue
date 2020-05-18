@@ -1,9 +1,10 @@
 <template>
   <div class="register_blood_pressure">
+    <h1>Blood pressure</h1>
     <form class="" @submit.prevent="register()">
       <label>Systolic pressure [mm Hg]</label>
       <input type="number" v-model="systolic_pressure">
-      <label>Diastolicpressure [mm Hg]</label>
+      <label>Diastolic pressure [mm Hg]</label>
       <input type="number" v-model="diastolic_pressure">
       <input type="submit">
     </form>
@@ -30,8 +31,13 @@ export default {
         systolic_pressure: this.systolic_pressure,
         diastolic_pressure: this.diastolic_pressure,
       })
-      .then(response => {console.log(response.data)})
-      .catch(error => {console.log(error)})
+      .then(() => {
+        this.$router.push({name: 'blood_pressure'})
+      })
+      .catch(error => {
+        alert('Something went wrong')
+        console.log(error)
+      })
     }
   }
 }
@@ -40,8 +46,12 @@ export default {
 <style scoped>
 
 form {
-  display: flex;
+  display: inline-flex;
   flex-direction: column;
   justify-content: center;
+}
+
+form > * {
+  margin: 0.5em;
 }
 </style>
