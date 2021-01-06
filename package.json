@@ -12,7 +12,7 @@
     "@moreillon/vue_access_control": "^1.0.1",
     "@moreillon/vue_application_template": "^1.0.2",
     "@moreillon/vue_loader": "^0.1.1",
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "chart.js": "^2.9.3",
     "core-js": "^3.4.3",
     "dotenv": "^8.2.0",
